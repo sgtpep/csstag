@@ -74,6 +74,7 @@ const getTokens = (runner, cssSourceFilePath, filetypeOptions) => {
     // eslint-disable-next-line no-console
     console.warn(message.text);
   });
+  lazyResult.root.tokens.toString = (...args) => lazyResult.root.toString(...args);
   return lazyResult.root.tokens;
 };
 

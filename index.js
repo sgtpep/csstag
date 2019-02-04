@@ -5,7 +5,9 @@ const css = `
   color: red;
 }
 `;
-console.log(requireCSSModule(css, {}));
+const styles = requireCSSModule(css);
+console.log(styles);
+console.log(styles.toString());
 
 //console.log(requireCSSModule(, {}));
 //import App from './App.js';
