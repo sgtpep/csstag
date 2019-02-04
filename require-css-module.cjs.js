@@ -77,7 +77,7 @@ const getTokens = (runner, cssSourceFilePath, filetypeOptions) => {
   return lazyResult.root.tokens;
 };
 
-var _default = (cssSourceFilePath, options) => {
+var _default = (cssSourceFilePath, options = {}) => {
   // eslint-disable-next-line prefer-const
   let runner;
   let generateScopedName;
