@@ -1,0 +1,8 @@
+commit
+  remove bitbucket
+extract css
+command
+  webpack -o require-css-module.js --output-library-target=window require-css-module.cjs.js; sed -i 's/^.*}(window,/export default (/; s/\(}]))\);$/\1.default;/' require-css-module.js
+multiple reflows
+babel plugin
+publish

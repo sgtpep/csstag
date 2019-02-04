@@ -1,0 +1,12 @@
+{
+  "devDependencies": {
+    "babel-plugin-react-css-modules": "^5.0.0"
+  },
+  "dependencies": {
+    "htm": "^2.0.0",
+    "preact": "^8.4.2"
+  },
+  "scripts": {
+    "start": "http-server -c-1 -p 8000"
+  }
+}
