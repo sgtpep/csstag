@@ -1,5 +1,3 @@
-extract css
-
 filename in hash
 review require-css-module.cjs.js
 multiple reflows
