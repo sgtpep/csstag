@@ -1,6 +1,8 @@
 {
   "devDependencies": {
-    "babel-plugin-react-css-modules": "^5.0.0"
+    "babel-plugin-react-css-modules": "^5.0.0",
+    "webpack": "^4.29.1",
+    "webpack-cli": "^3.2.1"
   },
   "dependencies": {
     "htm": "^2.0.0",
