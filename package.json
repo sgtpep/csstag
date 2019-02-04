@@ -9,6 +9,6 @@
     "preact": "^8.4.2"
   },
   "scripts": {
-    "start": "http-server -c-1 -p 8000"
+    "build": "webpack -o require-css-module.js --output-library-target=window require-css-module.cjs.js; sed -i 's/^.*}(window,/export default (/; s/\\(}]))\\);$/\\1.default;/' require-css-module.js"
   }
 }
