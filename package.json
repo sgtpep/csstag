@@ -8,18 +8,21 @@
   "devDependencies": {
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.3.1",
+    "babel-loader": "^8.0.5",
     "postcss": "^7.0.14",
     "postcss-modules-local-by-default": "^2.0.4",
     "postcss-modules-parser": "^1.1.1",
     "postcss-modules-scope": "^2.0.1",
     "rollup": "^1.1.2",
+    "rollup-plugin-alias": "^1.5.1",
     "rollup-plugin-babel": "^4.3.2",
     "rollup-plugin-commonjs": "^9.2.0",
     "rollup-plugin-json": "^3.1.0",
     "rollup-plugin-node-builtins": "^2.1.2",
     "rollup-plugin-node-resolve": "^4.0.0",
     "rollup-plugin-terser": "^4.0.4",
-    "rollup-plugin-virtual": "^1.0.1"
+    "webpack": "^4.29.1",
+    "webpack-cli": "^3.2.3"
   },
   "name": "icss",
   "scripts": {
