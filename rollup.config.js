@@ -16,12 +16,10 @@ export default {
       exports: 'named',
       file: 'index.cjs.js',
       format: 'cjs',
-      sourcemap: true,
     },
     {
       file: 'index.mjs',
       format: 'esm',
-      sourcemap: true,
     },
     {
       banner: `
