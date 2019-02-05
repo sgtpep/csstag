@@ -1,3 +1,7 @@
+reset
+export a contructor
+index.min.js, index.js
+
 preserve sourcemaps on patching: rollup-plugin-replace
 nginx cache
 replace an app with a test
