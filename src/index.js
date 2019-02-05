@@ -11,12 +11,22 @@ export const append = function() {
 
 let instance;
 export const css = function(strings, ...keys) {
+  let options = {};
+  Array.isArray(strings) ||
+    ([options, strings, keys] = [strings, keys[0], keys.slice(1)]);
   instance ||
-    (instance = postcss([localByDefault(), modulesScope(), modulesParser()]));
+    (instance = postcss([
+      ...(options.pluginsBefore || []),
+      localByDefault(options.localByDefault),
+      modulesScope(options.modulesScope),
+      modulesParser(options.modulesParser),
+      ...(options.plugins || []),
+    ]));
   const result = instance.process(
     strings
       .map((string, index) => (index ? keys[index - 1] : '') + string)
-      .join('')
+      .join(''),
+    options.process
   );
   (this || styles).push(result.toString());
   return result.root.tokens;
