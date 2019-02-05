@@ -9,6 +9,7 @@ export const append = function() {
   document.head.appendChild(style);
 };
 
+let id = 1;
 let instance;
 export const css = function(strings, ...keys) {
   let options = {};
@@ -26,7 +27,10 @@ export const css = function(strings, ...keys) {
     strings
       .map((string, index) => (index ? keys[index - 1] : '') + string)
       .join(''),
-    options.process
+    {
+      from: (options.prefix || 'style') + id++,
+      ...options.process,
+    }
   );
   (this || styles).push(result.toString());
   return result.root.tokens;
