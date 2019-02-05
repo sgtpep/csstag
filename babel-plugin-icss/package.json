@@ -1,0 +1,8 @@
+{
+  "name": "babel-plugin-icss",
+  "dependencies": {
+    "icss": "*"
+  },
+  "description": "Compiles CSS Modules in icss's tagged templates to actual styles.",
+  "version": "0.1.0"
+}
