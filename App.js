@@ -1,5 +1,5 @@
 import Child from './Child.js';
-import css from './dist/index.mjs';
+import css from './index.js';
 import html from './html.js';
 
 export default () =>
