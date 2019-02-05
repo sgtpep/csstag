@@ -9,19 +9,22 @@ export const append = function() {
   document.head.appendChild(style);
 };
 
+let process;
 export const css = function(strings, ...keys) {
-  const result = postcss([
-    localByDefault(),
-    modulesScope(),
-    modulesParser(),
-  ]).process(
+  process ||
+    ({ process } = postcss([
+      localByDefault(),
+      modulesScope(),
+      modulesParser(),
+    ]));
+  const result = process(
     strings
       .map((string, index) => (index ? keys[index - 1] : '') + string)
       .join('')
   );
   (this || styles).push(result.toString());
   return result.root.tokens;
-}
+};
 
 export const reset = function() {
   return (this || styles).splice(0, (this || styles).length);
