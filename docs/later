@@ -7,7 +7,8 @@ package.json
   homepage
 basic readme
 tests
-  remove app
+  remove App.js, Child.js, main.js index.html
+  babel-plugin-icss
 prettier
 eslint
 travis
@@ -24,6 +25,11 @@ babel-plugin-icss/readme
   usage
   no interpolation
     how to use variables
+  rollup
+    import fs from 'fs';
+    before other plugins: rollup-plugin-alias({ './node_modules/icss/index.min.js': './node_modules/icss/empty.js' })
+  webpack
+    https://webpack.js.org/configuration/resolve/
 promote
   htm
   css-modules

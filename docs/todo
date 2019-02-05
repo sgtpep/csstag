@@ -1,5 +1,6 @@
 babel plugin
-  remove icss from bundle
+  webpack
+  remove icss import
   append styles
   pass options
 publish
