@@ -10,6 +10,8 @@ readme
   example
   api
     bind
+    options
+  babel plugin
 tags
 promote
   htm
