@@ -20,6 +20,10 @@ readme
     bind
     options
   babel plugin
+babel-plugin-icss/readme
+  usage
+  no interpolation
+    how to use variables
 promote
   htm
   css-modules
