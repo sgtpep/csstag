@@ -1,7 +1,6 @@
 preserve sourcemaps on patching: rollup-plugin-replace
 filename in hash
 nginx cache
-nginx favicon
 babel plugin
 publish
   icss
