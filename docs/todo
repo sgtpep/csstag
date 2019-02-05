@@ -1,9 +1,6 @@
-webpack
-  babel
-babel plugin
-  remove icss import
-  append styles
-  pass options
+pass options to the babel plugin
+  rollup
+  webpack
 commit webpack and rollup configs
   remove
 publish

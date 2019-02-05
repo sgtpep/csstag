@@ -23,14 +23,16 @@ readme
   babel plugin
 babel-plugin-icss/readme
   usage
+  options
+    tag
   no interpolation
-    how to use variables
+    how to use CSS custom properties (CSS variables)
   rollup
     https://github.com/rollup/rollup-plugin-alias
-    before other plugins: rollup-plugin-alias({ './node_modules/icss/index.min.js': './node_modules/icss/empty.js' })
+    before other plugins: rollup-plugin-alias({ './node_modules/icss/index.min.js': './node_modules/babel-plugin-icss/stub.js' })
   webpack
     https://webpack.js.org/configuration/resolve/
-    resolve: { alias: { './index.min.js': './empty.js' } }
+    resolve: { alias: { 'icss': 'babel-plugin-icss/stub' } }
 promote
   htm
   css-modules
