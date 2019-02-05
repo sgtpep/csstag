@@ -13,6 +13,7 @@ export default {
     console.warn(message.toString()),
   output: [
     {
+      exports: 'named',
       file: 'index.cjs.js',
       format: 'cjs',
       sourcemap: true,
