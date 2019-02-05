@@ -1,8 +1,7 @@
 import App from './App.js';
-import html, { render } from './html.js';
-import { append } from './index.js';
+import html, { appendStyles, render } from './html.js';
 
-append();
+appendStyles();
 render(
   html`
     <${App}/ >
