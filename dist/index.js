@@ -17870,8 +17870,16 @@ processor$2.generateScopedName = function(exportedName, path) {
 
 var src = processor$2;
 
+const append = () => {
+  const style = document.createElement('style');
+  style.textContent = styles.join('\n');
+  document.head.appendChild(style);
+};
+
+const styles = [];
+
 var index$2 = (strings, ...keys) => {
-  const styles = postcss([
+  const result = postcss([
     postcssModulesLocalByDefault(),
     src(),
     postcssModulesParser(),
@@ -17880,8 +17888,9 @@ var index$2 = (strings, ...keys) => {
       .map((string, index) => (index ? keys[index - 1] : '') + string)
       .join('')
   );
-  console.log(styles.toString());
-  return styles.root.tokens;
+  styles.push(result.toString());
+  return result.root.tokens;
 };
 
 export default index$2;
+export { append, styles };
