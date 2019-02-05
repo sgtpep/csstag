@@ -21,6 +21,6 @@
   "name": "icss",
   "scripts": {
     "build": "rollup -c"
-  }
+  },
   "version": "0.1.0"
 }
