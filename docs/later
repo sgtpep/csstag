@@ -2,3 +2,7 @@ filename in hash
 review require-css-module.cjs.js
 babel plugin
 publish
+  icss
+promote
+  preact
+  css-modules
