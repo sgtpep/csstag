@@ -1,4 +1,4 @@
-import css from './dist/index.js';
+import css from './dist/index.mjs';
 import html from './html.js';
 
 export default () =>
