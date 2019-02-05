@@ -1,5 +1,9 @@
 {
   "browser": "index.min.js",
+  "dependencies": {
+    "htm": "^2.0.0",
+    "preact": "^8.4.2"
+  },
   "description": "Use CSS Modules as tagged templates in browsers and node.",
   "devDependencies": {
     "postcss": "^7.0.14",
@@ -13,10 +17,6 @@
     "rollup-plugin-node-resolve": "^4.0.0",
     "rollup-plugin-terser": "^4.0.4",
     "rollup-plugin-virtual": "^1.0.1"
-  },
-  "dependencies": {
-    "htm": "^2.0.0",
-    "preact": "^8.4.2"
   },
   "name": "icss",
   "scripts": {
