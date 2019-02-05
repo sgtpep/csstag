@@ -3,6 +3,7 @@ import json from 'rollup-plugin-json';
 import nodeBuiltins from 'rollup-plugin-node-builtins';
 import nodeResolve from 'rollup-plugin-node-resolve';
 import { spawn } from 'child_process';
+import { terser } from 'rollup-plugin-terser';
 
 export default {
   input: 'src/index.js',
@@ -40,5 +41,6 @@ var global = typeof global === 'undefined' ? window : global;
         );
       },
     },
+    terser(),
   ],
 };
