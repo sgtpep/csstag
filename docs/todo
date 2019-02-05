@@ -1,3 +1,7 @@
 preserve sourcemaps on patching: rollup-plugin-replace
 nginx cache
-replaca an app with a test
+replace an app with a test
+filename in hash
+babel plugin
+publish
+  icss

@@ -1,8 +1,8 @@
-filename in hash
-review require-css-module.cjs.js
-babel plugin
-publish
-  icss
+readme
+  description
+  usage by formats
+  example
+tags
 promote
-  preact
+  htm
   css-modules
