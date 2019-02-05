@@ -26,10 +26,11 @@ babel-plugin-icss/readme
   no interpolation
     how to use variables
   rollup
-    import fs from 'fs';
+    https://github.com/rollup/rollup-plugin-alias
     before other plugins: rollup-plugin-alias({ './node_modules/icss/index.min.js': './node_modules/icss/empty.js' })
   webpack
     https://webpack.js.org/configuration/resolve/
+    resolve: { alias: { './index.min.js': './empty.js' } }
 promote
   htm
   css-modules
