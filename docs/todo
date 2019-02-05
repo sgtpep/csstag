@@ -1,4 +1,3 @@
-remove duplicates: acorn, sourcemap
 preserve sourcemaps on patching: rollup-plugin-replace
 nginx cache
 replaca an app with a test

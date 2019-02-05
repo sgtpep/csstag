@@ -39,7 +39,12 @@ var global = typeof global === 'undefined' ? window : global;
           'node_modules/postcss-modules-parser/node_modules/postcss',
         ]),
     },
-    virtual({ 'source-map': '' }),
+    virtual(
+      ['chalk', 'source-map', 'supports-color'].reduce(
+        (option, id) => ({ ...option, [id]: '' }),
+        {}
+      )
+    ),
     nodeResolve(),
     commonJS(),
     nodeBuiltins(),
