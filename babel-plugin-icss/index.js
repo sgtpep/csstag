@@ -35,7 +35,7 @@ module.exports = ({ types }, options = {}) => {
           } else {
             console.warn(
               path.buildCodeFrameError(
-                'babel-plugin-icss can only process tagged templates without string interpolation. Use CSS custom properties (variables) instead.'
+                'babel-plugin-icss can only process tagged templates without string interpolation. Consider using CSS custom properties (variables) instead.'
               )
             );
             path.remove();
