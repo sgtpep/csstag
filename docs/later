@@ -25,6 +25,7 @@ babel-plugin-icss/readme
   usage
   options
     tag
+    icss options
   no interpolation
     how to use CSS custom properties (CSS variables)
   rollup

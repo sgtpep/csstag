@@ -13,7 +13,7 @@ module.exports = ({ types }, options = {}) => {
               types.callExpression(types.identifier(tag), [
                 types.objectExpression(
                   Object.entries(
-                    css([path.node.quasi.quasis[0].value.raw])
+                    css(options, [path.node.quasi.quasis[0].value.raw])
                   ).map(([key, value]) =>
                     types.objectProperty(
                       key.match(/(^\d|[^a-z0-9_$])/i)
