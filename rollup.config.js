@@ -8,6 +8,9 @@ import { terser } from 'rollup-plugin-terser';
 
 export default {
   input: 'src/index.js',
+  onwarn: message =>
+    message.message.startsWith('Circular dependency:') ||
+    console.warn(message.toString()),
   output: [
     {
       file: 'index.cjs.js',
