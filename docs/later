@@ -12,7 +12,6 @@ readme
     bind
     options
   babel plugin
-tags
 promote
   htm
   css-modules
