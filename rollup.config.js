@@ -14,6 +14,7 @@ var global = typeof global === 'undefined' ? window : global;
 `,
     file: 'dist/index.js',
     format: 'esm',
+    sourcemap: true,
   },
   plugins: [
     {
