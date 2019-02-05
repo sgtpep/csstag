@@ -1,6 +1,6 @@
+'use strict';
 
-const process = { argv: [], env: {} };
-var global = typeof global === 'undefined' ? window : global;
+Object.defineProperty(exports, '__esModule', { value: true });
 
 var commonjsGlobal = typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
 
@@ -14715,6 +14715,7 @@ var index$2 = (strings, ...keys) => {
   return result.root.tokens;
 };
 
-export default index$2;
-export { append, styles };
-//# sourceMappingURL=index.js.map
+exports.append = append;
+exports.styles = styles;
+exports.default = index$2;
+//# sourceMappingURL=index.cjs.js.map

@@ -1,7 +1,3 @@
-
-const process = { argv: [], env: {} };
-var global = typeof global === 'undefined' ? window : global;
-
 var commonjsGlobal = typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
 
 function unwrapExports (x) {
@@ -14717,4 +14713,4 @@ var index$2 = (strings, ...keys) => {
 
 export default index$2;
 export { append, styles };
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=index.mjs.map
