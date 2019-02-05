@@ -3,7 +3,7 @@ import html from './html.js';
 
 export default () =>
   html`
-    <div class=${style.root}>TODO</div>
+    <div class=${styles.root}>TODO</div>
   `;
 
 const styles = css`
