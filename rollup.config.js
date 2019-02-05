@@ -54,20 +54,22 @@ export default {
     json(),
     {
       name: 'patch',
-      renderChunk: code => {
-        const start = code.indexOf('\nvar container = ');
-        const string = '\nunwrapExports(container);';
-        const end = code.indexOf(string, start) + string.length;
-        const position = code.indexOf('\nvar rule = ');
-        return {
-          code:
-            code.slice(0, position) +
-            code.slice(start, end) +
-            code.slice(position, start) +
-            code.slice(end),
-          map: null,
-        };
-      },
+      renderChunk: code => ({
+        code: [['container', 'rule'], ['cssSyntaxError', 'input']].reduce(
+          (code, [name1, name2]) => {
+            const start = code.indexOf(`\nvar ${name1} = `);
+            const string = `\nunwrapExports(${name1});`;
+            const end = code.indexOf(string, start) + string.length;
+            const position = code.indexOf(`\nvar ${name2} = `);
+            return code.slice(0, position) +
+              code.slice(start, end) +
+              code.slice(position, start) +
+              code.slice(end);
+          },
+          code
+        ),
+        map: null,
+      }),
     },
     {
       name: 'terser',
