@@ -43,12 +43,14 @@ var global = typeof global === 'undefined' ? window : global;
         const string = '\nunwrapExports(container);';
         const end = code.indexOf(string, start) + string.length;
         const position = code.indexOf('\nvar rule = ');
-        return (
-          code.slice(0, position) +
-          code.slice(start, end) +
-          code.slice(position, start) +
-          code.slice(end)
-        );
+        return {
+          code:
+            code.slice(0, position) +
+            code.slice(start, end) +
+            code.slice(position, start) +
+            code.slice(end),
+          map: null,
+        };
       },
     },
     terser(),
