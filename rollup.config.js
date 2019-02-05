@@ -7,15 +7,22 @@ import { terser } from 'rollup-plugin-terser';
 
 export default {
   input: 'src/index.js',
-  output: {
-    banner: `
+  output: [
+    {
+      file: `dist/index.js`,
+      format: 'cjs',
+      sourcemap: true,
+    },
+    {
+      banner: `
 const process = { argv: [], env: {} };
 var global = typeof global === 'undefined' ? window : global;
 `,
-    file: 'dist/index.js',
-    format: 'esm',
-    sourcemap: true,
-  },
+      file: `dist/index.mjs`,
+      format: 'esm',
+      sourcemap: true,
+    },
+  ],
   plugins: [
     {
       buildStart: () =>
