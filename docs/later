@@ -1,8 +1,15 @@
+tests
+  remove app
+prettier
+eslint
+travis
 readme
+  badge
   description
   usage by formats
   example
   api
+    bind
 tags
 promote
   htm
