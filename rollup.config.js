@@ -47,7 +47,8 @@ var global = typeof global === 'undefined' ? window : global;
     nodeBuiltins(),
     json(),
     {
-      renderChunk: (code, chunk, options) => {
+      name: 'patch',
+      renderChunk: code => {
         const start = code.indexOf('\nvar container = ');
         const string = '\nunwrapExports(container);';
         const end = code.indexOf(string, start) + string.length;
