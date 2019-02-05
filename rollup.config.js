@@ -10,8 +10,13 @@ export default {
   input: 'src/index.js',
   output: [
     {
-      file: `dist/index.js`,
+      file: 'index.cjs.js',
       format: 'cjs',
+      sourcemap: true,
+    },
+    {
+      file: 'index.mjs',
+      format: 'esm',
       sourcemap: true,
     },
     {
@@ -19,7 +24,7 @@ export default {
 const process = { argv: [], env: {} };
 var global = typeof global === 'undefined' ? window : global;
 `,
-      file: `dist/index.mjs`,
+      file: 'index.js',
       format: 'esm',
       sourcemap: true,
     },
