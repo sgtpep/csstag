@@ -33,12 +33,12 @@ module.exports = ({ types }, options = {}) => {
               )
             );
           } else {
-            console.warn(
+            console.error(
               path.buildCodeFrameError(
                 'babel-plugin-icss can only process tagged templates without string interpolation. Consider using CSS custom properties (variables) instead.'
-              )
+              ).toString()
             );
-            path.remove();
+            process.exit(1)
           }
         }
       },
