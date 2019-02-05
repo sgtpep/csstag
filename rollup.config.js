@@ -61,6 +61,12 @@ var global = typeof global === 'undefined' ? window : global;
         };
       },
     },
-    terser(),
+    {
+      name: 'terser',
+      renderChunk: (code, chunk, options) =>
+        options.format === 'esm' && options.banner
+          ? terser().renderChunk(code, chunk, options)
+          : { code, map: null },
+    },
   ],
 };
