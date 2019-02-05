@@ -1,5 +1,5 @@
 'use strict';
-const { css } = require('icss');
+const { css, styles } = require('icss');
 
 module.exports = ({ types }, options = {}) => {
   const tag = options.tag || 'css';
@@ -10,17 +10,21 @@ module.exports = ({ types }, options = {}) => {
         if (path.node.tag.name === tag) {
           if (path.node.quasi.quasis.length === 1) {
             path.replaceWith(
-              types.objectExpression(
-                Object.entries(css([path.node.quasi.quasis[0].value.raw])).map(
-                  ([key, value]) =>
+              types.callExpression(types.identifier(tag), [
+                types.objectExpression(
+                  Object.entries(
+                    css([path.node.quasi.quasis[0].value.raw])
+                  ).map(([key, value]) =>
                     types.objectProperty(
                       key.match(/(^\d|[^a-z0-9_$])/i)
                         ? types.stringLiteral(key)
                         : types.identifier(key),
                       types.stringLiteral(value)
                     )
-                )
-              )
+                  )
+                ),
+                types.stringLiteral(styles[styles.length - 1]),
+              ])
             );
           } else {
             throw path.buildCodeFrameError(
