@@ -1,4 +1,3 @@
-commit webpack and rollup configs
-  remove
 publish
   icss
+  babel-plugin-icss
