@@ -1,5 +1,5 @@
 {
-  "browser": "index.js",
+  "browser": "index.min.js",
   "devDependencies": {
     "postcss": "^7.0.14",
     "postcss-modules-local-by-default": "^2.0.4",
@@ -17,8 +17,6 @@
     "htm": "^2.0.0",
     "preact": "^8.4.2"
   },
-  "main": "index.cjs.js",
-  "module": "index.mjs",
   "scripts": {
     "build": "rollup -c"
   }

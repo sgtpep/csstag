@@ -1,5 +1,3 @@
-index.min.js, index.js
-
 preserve sourcemaps on patching: rollup-plugin-replace
 filename in hash
 nginx cache

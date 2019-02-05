@@ -14,7 +14,7 @@ export default {
   output: [
     {
       exports: 'named',
-      file: 'index.cjs.js',
+      file: 'index.js',
       format: 'cjs',
     },
     {
@@ -26,7 +26,7 @@ export default {
 const process = { argv: [], env: {} };
 var global = typeof global === 'undefined' ? window : global;
 `,
-      file: 'index.js',
+      file: 'index.min.js',
       format: 'esm',
       sourcemap: true,
     },
