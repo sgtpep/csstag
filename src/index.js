@@ -9,15 +9,11 @@ export const append = function() {
   document.head.appendChild(style);
 };
 
-let process;
+let instance;
 export const css = function(strings, ...keys) {
-  process ||
-    ({ process } = postcss([
-      localByDefault(),
-      modulesScope(),
-      modulesParser(),
-    ]));
-  const result = process(
+  instance ||
+    (instance = postcss([localByDefault(), modulesScope(), modulesParser()]));
+  const result = instance.process(
     strings
       .map((string, index) => (index ? keys[index - 1] : '') + string)
       .join('')
