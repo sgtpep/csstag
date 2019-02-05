@@ -1,6 +1,5 @@
 import Child from './Child.js';
-import css from './index.js';
-import html from './html.js';
+import html, { css } from './html.js';
 
 export default () =>
   html`
