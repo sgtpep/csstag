@@ -9,13 +9,7 @@ export const append = function() {
   document.head.appendChild(style);
 };
 
-export const reset = function() {
-  return (this || styles).splice(0, (this || styles).length);
-};
-
-export const styles = [];
-
-export default function(strings, ...keys) {
+export const css = function(strings, ...keys) {
   const result = postcss([
     localByDefault(),
     modulesScope(),
@@ -28,3 +22,11 @@ export default function(strings, ...keys) {
   (this || styles).push(result.toString());
   return result.root.tokens;
 }
+
+export const reset = function() {
+  return (this || styles).splice(0, (this || styles).length);
+};
+
+export const styles = [];
+
+export default css;
