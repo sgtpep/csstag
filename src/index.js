@@ -3,15 +3,19 @@ import modulesParser from 'postcss-modules-parser';
 import modulesScope from 'postcss-modules-scope';
 import postcss from 'postcss';
 
-export const append = () => {
+export const append = function() {
   const style = document.createElement('style');
-  style.textContent = styles.join('\n');
+  style.textContent = (this || styles).join('\n');
   document.head.appendChild(style);
+};
+
+export const reset = function() {
+  return (this || styles).splice(0, (this || styles).length);
 };
 
 export const styles = [];
 
-export default (strings, ...keys) => {
+export default function(strings, ...keys) {
   const result = postcss([
     localByDefault(),
     modulesScope(),
@@ -21,6 +25,6 @@ export default (strings, ...keys) => {
       .map((string, index) => (index ? keys[index - 1] : '') + string)
       .join('')
   );
-  styles.push(result.toString());
+  (this || styles).push(result.toString());
   return result.root.tokens;
-};
+}
