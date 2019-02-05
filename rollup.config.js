@@ -6,6 +6,11 @@ import virtual from 'rollup-plugin-virtual';
 import { spawn } from 'child_process';
 import { terser } from 'rollup-plugin-terser';
 
+const banner = `
+var process = typeof process === 'undefined' ? { argv: [], env: {} } : process;
+var global = typeof global === 'undefined' ? window : global;
+`;
+
 export default {
   input: 'src/index.js',
   onwarn: message =>
@@ -18,14 +23,12 @@ export default {
       format: 'cjs',
     },
     {
+      banner,
       file: 'index.mjs',
       format: 'esm',
     },
     {
-      banner: `
-const process = { argv: [], env: {} };
-var global = typeof global === 'undefined' ? window : global;
-`,
+      banner,
       file: 'index.min.js',
       format: 'esm',
       sourcemap: true,
