@@ -1,3 +1,11 @@
+package.json
+  files
+  repository: sgtpep/icss
+  keywords
+  author
+  license
+  homepage
+basic readme
 tests
   remove app
 prettier
