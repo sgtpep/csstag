@@ -1,14 +1,20 @@
 {
   "devDependencies": {
-    "babel-plugin-react-css-modules": "^5.0.0",
-    "webpack": "^4.29.1",
-    "webpack-cli": "^3.2.1"
+    "postcss": "^7.0.14",
+    "postcss-modules-local-by-default": "^2.0.4",
+    "postcss-modules-parser": "^1.1.1",
+    "postcss-modules-scope": "^2.0.1",
+    "rollup": "^1.1.2",
+    "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-json": "^3.1.0",
+    "rollup-plugin-node-builtins": "^2.1.2",
+    "rollup-plugin-node-resolve": "^4.0.0"
   },
   "dependencies": {
     "htm": "^2.0.0",
     "preact": "^8.4.2"
   },
   "scripts": {
-    "build": "webpack -p -o require-css-module.js --output-library-target=window require-css-module.cjs.js; sed -i 's/^.*}(window,/export default (/; s/\\(}]))\\);$/\\1.default;/' require-css-module.js"
+    "build": "rollup -c"
   }
 }
