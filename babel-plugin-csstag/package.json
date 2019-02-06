@@ -1,0 +1,12 @@
+{
+  "author": "Danil Semelenov",
+  "name": "babel-plugin-csstag",
+  "dependencies": {
+    "csstag": "*"
+  },
+  "description": "Compiles CSS Modules in csstag's tagged templates to actual styles.",
+  "homepage": "https://github.com/sgtpep/csstag/tree/master/babel-plugin-csstag",
+  "license": "MIT",
+  "repository": "sgtpep/csstag",
+  "version": "0.1.0"
+}

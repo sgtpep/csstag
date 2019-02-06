@@ -1,3 +1,4 @@
+not tersed
 publish
-  icss
-  babel-plugin-icss
+  csstag
+  babel-plugin-csstag

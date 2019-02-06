@@ -1,5 +1,5 @@
 'use strict';
-const { css, styles } = require('icss');
+const { css, styles } = require('csstag');
 
 module.exports = ({ types }, options = {}) => {
   const tag = options.tag || 'css';
@@ -28,7 +28,7 @@ module.exports = ({ types }, options = {}) => {
             );
           } else {
             throw path.buildCodeFrameError(
-              'babel-plugin-icss can only process tagged templates without string interpolation. Consider using CSS custom properties instead (also known as CSS variables).'
+              'babel-plugin-csstag can only process tagged templates without string interpolation. Consider using CSS custom properties instead (also known as CSS variables).'
             );
           }
         }

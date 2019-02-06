@@ -17,10 +17,10 @@
     "rollup-plugin-node-resolve": "^4.0.0",
     "rollup-plugin-terser": "^4.0.4"
   },
-  "homepage": "https://github.com/sgtpep/icss",
+  "homepage": "https://github.com/sgtpep/csstag",
   "license": "MIT",
-  "name": "icss",
-  "repository": "sgtpep/icss",
+  "name": "csstag",
+  "repository": "sgtpep/csstag",
   "scripts": {
     "build": "rollup -c",
     "prepublishOnly": "rollup -c"
