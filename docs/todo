@@ -20,6 +20,7 @@ readme
   format with prettier: css``
   files: index.*
   demo
+github: description, demo
 babel-plugin-csstag/readme
   usage
   links to example projects
