@@ -1,25 +1,30 @@
 import css, { appendStyles } from '../index.min.js';
 
 const styles = css`
-  :global(html),
-  :global(body),
-  .frame {
-    height: 100%;
-  }
+  @value color: red;
 
   :global(body) {
-    margin: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    margin-top: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .outlined {
+    border: 3px solid color;
   }
 
   .frame {
-    border: 3px solid red;
-    box-sizing: border-box;
-    display: block;
-    width: 100%;
+    composes: outlined;
+    flex: 1;
   }
 `;
 
-document.body.innerHTML = `
+document.body.innerHTML += `
   <iframe class="${styles.frame}" src="index.js"></iframe>
 `;
 appendStyles();
