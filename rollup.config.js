@@ -15,6 +15,7 @@ export default {
   input: 'src/index.js',
   onwarn: message =>
     message.message.startsWith('Circular dependency:') ||
+    // eslint-disable-next-line no-console
     console.warn(message.toString()),
   output: [
     {

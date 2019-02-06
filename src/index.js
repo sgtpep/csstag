@@ -12,7 +12,8 @@ export const appendStyles = function() {
 
 const base64 = string =>
   typeof btoa === 'undefined'
-    ? Buffer.from(string.toString()).toString('base64')
+    ? // eslint-disable-next-line no-undef
+      Buffer.from(string.toString()).toString('base64')
     : btoa(string);
 
 const boundStyles = function() {
@@ -34,6 +35,7 @@ export const css = function(strings, ...keys) {
     ([options, strings, keys] = [strings, keys[0], keys.slice(1)]);
   keys.length &&
     !options.ignoreInterpolation &&
+    // eslint-disable-next-line no-console
     console.warn(
       '`csstag` discourages from using string interpolation in tagged templates, because it makes it impossible to strip off csstag module on bundling using `babel-plugin-csstag`. To suppress this warning pass an option `ignoreInterpolation`.'
     );
