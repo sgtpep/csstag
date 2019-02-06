@@ -1,4 +1,4 @@
-travis
+github: description, demo
 package.json: keywords
 readme
   badge
@@ -16,7 +16,6 @@ readme
   format with prettier: css``
   files: index.*
   demo
-github: description, demo
 babel-plugin-csstag/readme
   usage
   links to example projects
