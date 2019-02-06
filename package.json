@@ -1,4 +1,5 @@
 {
+  "author": "Danil Semelenov",
   "browser": "index.min.js",
   "description": "Use CSS Modules as tagged templates in browsers and node.",
   "devDependencies": {
@@ -16,9 +17,13 @@
     "rollup-plugin-node-resolve": "^4.0.0",
     "rollup-plugin-terser": "^4.0.4"
   },
+  "homepage": "https://github.com/sgtpep/icss",
+  "license": "MIT",
   "name": "icss",
+  "repository": "sgtpep/icss",
   "scripts": {
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "prepublishOnly": "rollup -c"
   },
   "version": "0.1.0"
 }
