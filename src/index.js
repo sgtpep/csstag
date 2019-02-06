@@ -10,11 +10,23 @@ export const appendStyles = function() {
   document.head.appendChild(style);
 };
 
+const base64 = string =>
+  typeof btoa === 'undefined'
+    ? Buffer.from(string.toString()).toString('base64')
+    : btoa(string);
+
 const boundStyles = function() {
   return Array.isArray(this) ? this : styles;
 };
 
-let id = 1;
+const hash = string =>
+  base64(
+    [...string].reduce(
+      (hash, char) => ((hash << 5) - hash + char.charCodeAt(0)) | 0,
+      0
+    )
+  ).slice(0, 5);
+
 let instance;
 export const css = function(strings, ...keys) {
   let options = {};
@@ -30,19 +42,21 @@ export const css = function(strings, ...keys) {
       ...(options.pluginsBefore || []),
       modulesValues(options.modulesValues),
       localByDefault(options.localByDefault),
-      modulesScope(options.modulesScope),
+      modulesScope({
+        generateScopedName: (name, path) =>
+          `${options.prefix || 'csstag'}__${name}___${path.slice(1)}`,
+        ...options.modulesScope,
+      }),
       modulesParser(options.modulesParser),
       ...(options.plugins || []),
     ]));
-  const result = instance.process(
-    strings
-      .map((string, index) => (index ? keys[index - 1] : '') + string)
-      .join(''),
-    {
-      from: (options.prefix || 'style') + id++,
-      ...options.process,
-    }
-  );
+  const style = strings
+    .map((string, index) => (index ? keys[index - 1] : '') + string)
+    .join('');
+  const result = instance.process(style, {
+    from: hash(style),
+    ...options.process,
+  });
   boundStyles.call(this).push(result.toString());
   return result.root.tokens;
 };
