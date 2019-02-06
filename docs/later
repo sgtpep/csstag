@@ -1,36 +1,6 @@
-example projects
-  rollup
-  webpack
-package.json: keywords
-basic readme
 tests
   remove App.js, Child.js, main.js index.html
   babel-plugin-csstag
-prettier
-eslint
-travis
-readme
-  badge
-  description
-  usage by formats
-  example
-  api
-    bind
-    options
-  babel plugin
-babel-plugin-csstag/readme
-  usage
-  options
-    tag
-    csstag options
-  no interpolation
-    how to use CSS custom properties (CSS variables)
-  rollup
-    https://github.com/rollup/rollup-plugin-alias
-    before other plugins: rollup-plugin-alias({ './node_modules/csstag/index.min.js': './node_modules/babel-plugin-csstag/csstag.js' })
-  webpack
-    https://webpack.js.org/configuration/resolve/
-    resolve: { alias: { 'csstag': 'babel-plugin-csstag/csstag' } }
 promote
   htm
   css-modules
