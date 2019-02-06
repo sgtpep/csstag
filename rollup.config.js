@@ -74,7 +74,7 @@ export default {
     {
       name: 'terser',
       renderChunk: (code, chunk, options) =>
-        options.format === 'esm' && options.banner
+        options.format === 'es' && options.sourcemap
           ? terser().renderChunk(code, chunk, options)
           : { code, map: null },
     },
