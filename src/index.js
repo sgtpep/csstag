@@ -3,7 +3,7 @@ import modulesParser from 'postcss-modules-parser';
 import modulesScope from 'postcss-modules-scope';
 import postcss from 'postcss';
 
-export const append = function() {
+export const appendStyles = function() {
   const style = document.createElement('style');
   style.textContent = (this || styles).join('\n');
   document.head.appendChild(style);
@@ -36,7 +36,7 @@ export const css = function(strings, ...keys) {
   return result.root.tokens;
 };
 
-export const reset = function() {
+export const resetStyles = function() {
   return (this || styles).splice(0, (this || styles).length);
 };
 
