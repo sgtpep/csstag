@@ -1,4 +1,6 @@
-hash or random id
+publish
+npm i -D source-map-explorer
+scripts.test: check whitelisted sourcemaps
 
 prettier
 eslint
