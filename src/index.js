@@ -1,6 +1,7 @@
 import localByDefault from 'postcss-modules-local-by-default';
 import modulesParser from 'postcss-modules-parser';
 import modulesScope from 'postcss-modules-scope';
+import modulesValues from 'postcss-modules-values';
 import postcss from 'postcss';
 
 export const appendStyles = function() {
@@ -23,6 +24,7 @@ export const css = function(strings, ...keys) {
   instance ||
     (instance = postcss([
       ...(options.pluginsBefore || []),
+      modulesValues(options.modulesValues),
       localByDefault(options.localByDefault),
       modulesScope(options.modulesScope),
       modulesParser(options.modulesParser),

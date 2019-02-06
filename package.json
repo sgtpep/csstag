@@ -7,6 +7,7 @@
     "postcss-modules-local-by-default": "^2.0.4",
     "postcss-modules-parser": "^1.1.1",
     "postcss-modules-scope": "^2.0.1",
+    "postcss-modules-values": "^2.0.0",
     "rollup": "^1.1.2",
     "rollup-plugin-commonjs": "^9.2.0",
     "rollup-plugin-json": "^3.1.0",
