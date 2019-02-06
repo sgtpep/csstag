@@ -3,9 +3,6 @@ hash or random id
 prettier
 eslint
 travis
-example projects
-  rollup
-  webpack
 package.json: keywords
 readme
   badge
@@ -16,6 +13,13 @@ readme
     bind
     options
   babel plugin
+  benefits
+    css modules is a widely adopted well-understood open specification based on standard css with a number of implementations
+    css-in-js libraries are opinionated and bloated
+    a real css
+  format with prettier: css``
+  files: index.*
+  demo
 babel-plugin-csstag/readme
   usage
   links to example projects
@@ -31,3 +35,6 @@ babel-plugin-csstag/readme
   webpack
     https://webpack.js.org/configuration/resolve/
     resolve: { alias: { 'csstag': 'babel-plugin-csstag/csstag' } }
+  examples
+    rollup
+    webpack

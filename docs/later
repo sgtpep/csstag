@@ -1,6 +1,12 @@
+css-modules vars
+  to error message
+  readme
 tests
   remove App.js, Child.js, main.js index.html
   babel-plugin-csstag
+  CSSSyntaxException
 promote
   htm
   css-modules
+  css-in-js lists: github, wikipedia
+function to extract vars: css / css modules
