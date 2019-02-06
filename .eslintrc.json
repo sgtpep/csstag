@@ -1,0 +1,17 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "extends": "eslint:recommended",
+  "overrides": {
+    "env": {
+      "node": true
+    },
+    "files": ["babel-plugin-csstag/index.js"]
+  },
+  "parserOptions": {
+    "ecmaVersion": 2019,
+    "sourceType": "module"
+  }
+}
