@@ -15,6 +15,11 @@ export const css = function(strings, ...keys) {
   let options = {};
   Array.isArray(strings) ||
     ([options, strings, keys] = [strings, keys[0], keys.slice(1)]);
+  keys.length &&
+    !options.ignoreInterpolation &&
+    console.warn(
+      "`csstag` discourages from using string interpolation in tagged templates, because it makes it impossible to strip off csstag module on bundling using `babel-plugin-csstag`. To suppress this warning pass an option `ignoreInterpolation`."
+    );
   instance ||
     (instance = postcss([
       ...(options.pluginsBefore || []),
