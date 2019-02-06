@@ -61,10 +61,12 @@ export default {
             const string = `\nunwrapExports(${name1});`;
             const end = code.indexOf(string, start) + string.length;
             const position = code.indexOf(`\nvar ${name2} = `);
-            return code.slice(0, position) +
+            return (
+              code.slice(0, position) +
               code.slice(start, end) +
               code.slice(position, start) +
-              code.slice(end);
+              code.slice(end)
+            );
           },
           code
         ),
