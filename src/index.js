@@ -6,8 +6,12 @@ import postcss from 'postcss';
 
 export const appendStyles = function() {
   const style = document.createElement('style');
-  style.textContent = (this || styles).join('\n');
+  style.textContent = boundStyles.call(this).join('\n');
   document.head.appendChild(style);
+};
+
+const boundStyles = function() {
+  return Array.isArray(this) ? this : styles;
 };
 
 let id = 1;
@@ -39,12 +43,13 @@ export const css = function(strings, ...keys) {
       ...options.process,
     }
   );
-  (this || styles).push(result.toString());
+  boundStyles.call(this).push(result.toString());
   return result.root.tokens;
 };
 
 export const resetStyles = function() {
-  return (this || styles).splice(0, (this || styles).length);
+  const boundStyles = boundStyles.call(this);
+  return boundStyles.splice(0, boundStyles.length);
 };
 
 export const styles = [];
