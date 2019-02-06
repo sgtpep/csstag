@@ -30,7 +30,7 @@ const styles = css`
   }
 `;
 
+appendStyles();
 document.body.innerHTML += `
   <iframe class="${styles.frame}" src="index.js"></iframe>
 `;
-appendStyles();
