@@ -1,9 +1,5 @@
 {
   "browser": "index.min.js",
-  "dependencies": {
-    "htm": "^2.0.0",
-    "preact": "^8.4.2"
-  },
   "description": "Use CSS Modules as tagged templates in browsers and node.",
   "devDependencies": {
     "@babel/core": "^7.2.2",
