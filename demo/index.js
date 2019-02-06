@@ -1,5 +1,18 @@
 import css, { appendStyles } from '../index.min.js';
 
+const styles = css`
+  @value blue: #2980b9;
+
+  .outlined {
+    border-radius: 0.5em;
+    border: 3px solid blue;
+  }
+
+  .frame {
+    composes: outlined;
+  }
+`;
+
 css`
   :global(body) {
     bottom: 0;
@@ -14,19 +27,6 @@ css`
 
   :global(body) > :last-child {
     flex: 1;
-  }
-`;
-
-const styles = css`
-  @value blue: #2980b9;
-
-  .outlined {
-    border-radius: 0.5em;
-    border: 3px solid blue;
-  }
-
-  .frame {
-    composes: outlined;
   }
 `;
 
