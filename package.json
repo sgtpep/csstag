@@ -3,6 +3,7 @@
   "browser": "index.min.js",
   "description": "Use CSS Modules as tagged templates in browsers and node.",
   "devDependencies": {
+    "eslint": "*",
     "postcss": "^7.0.14",
     "postcss-modules-local-by-default": "^2.0.4",
     "postcss-modules-parser": "^1.1.1",
@@ -26,6 +27,7 @@
     "build": "rollup -c",
     "check-format": "npm run format -- -c --no-write",
     "format": "prettier --write '**/*.{css,html,js,json,md,yml}'",
+    "lint": "eslint '**/*.js'",
     "prepublishOnly": "rollup -c",
     "test": "./test"
   },
