@@ -1,3 +1,9 @@
+package.json
+  repository: sgtpep/icss
+  files
+  author
+  license
+  homepage
 publish
   icss
   babel-plugin-icss

@@ -1,13 +1,7 @@
 example projects
   rollup
   webpack
-package.json
-  files
-  repository: sgtpep/icss
-  keywords
-  author
-  license
-  homepage
+package.json: keywords
 basic readme
 tests
   remove App.js, Child.js, main.js index.html
