@@ -14,7 +14,8 @@
     "rollup-plugin-node-builtins": "^2.1.2",
     "rollup-plugin-node-resolve": "^4.0.0",
     "rollup-plugin-terser": "^4.0.4",
-    "rollup-plugin-virtual": "^1.0.1"
+    "rollup-plugin-virtual": "^1.0.1",
+    "source-map-explorer": "^1.6.0"
   },
   "homepage": "https://github.com/sgtpep/csstag",
   "license": "MIT",
@@ -22,7 +23,8 @@
   "repository": "sgtpep/csstag",
   "scripts": {
     "build": "rollup -c",
-    "prepublishOnly": "rollup -c"
+    "prepublishOnly": "rollup -c",
+    "test": "./test"
   },
   "version": "0.2.0"
 }
