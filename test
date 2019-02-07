@@ -7,10 +7,10 @@ const packages = Object.keys(sourceMapExplorer('index.min.js').files)
   .map(path =>
     path.startsWith(`node_modules${sep}`)
       ? path
-          .split(`node_modules${sep}`)
+          .split(new RegExp(`(?:^|${sep})node_modules${sep}`))
           .slice(1)
           .map(path => path.split('/')[0])
-          .join('/')
+          .join('.')
       : path
   )
   .reduce(
