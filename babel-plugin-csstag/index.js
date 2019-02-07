@@ -1,6 +1,18 @@
 'use strict';
 const { css, styles } = require('csstag');
 
+const objectExpression = object =>
+  types.objectExpression(
+    Object.entries(object).map(([key, value]) =>
+      types.objectProperty(
+        key.match(/(^\d|[^a-z0-9_$])/i)
+          ? types.stringLiteral(key)
+          : types.identifier(key),
+        types.stringLiteral(value)
+      )
+    )
+  );
+
 module.exports = ({ types }, options = {}) => {
   const tag = options.tag || 'css';
   return {
@@ -11,17 +23,8 @@ module.exports = ({ types }, options = {}) => {
           if (path.node.quasi.quasis.length === 1) {
             path.replaceWith(
               types.callExpression(types.identifier(tag), [
-                types.objectExpression(
-                  Object.entries(
-                    css(options, [path.node.quasi.quasis[0].value.raw])
-                  ).map(([key, value]) =>
-                    types.objectProperty(
-                      key.match(/(^\d|[^a-z0-9_$])/i)
-                        ? types.stringLiteral(key)
-                        : types.identifier(key),
-                      types.stringLiteral(value)
-                    )
-                  )
+                objectExpression(
+                  css(options, [path.node.quasi.quasis[0].value.raw])
                 ),
                 types.stringLiteral(styles[styles.length - 1]),
               ])
