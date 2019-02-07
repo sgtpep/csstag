@@ -44,7 +44,7 @@ export const css = function(strings, ...keys) {
       localByDefault(options.localByDefault),
       modulesScope({
         generateScopedName: (name, path) =>
-          `${options.prefix || 'csstag'}__${name}___${path.slice(1)}`,
+          `${options.prefix || 'csstag'}__${name}___${path.replace(/^\//, '')}`,
         ...options.modulesScope,
       }),
       modulesParser(options.modulesParser),
