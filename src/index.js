@@ -20,13 +20,11 @@ const boundStyles = function() {
   return Array.isArray(this) ? this : styles;
 };
 
-const hash = string =>
-  base64(
-    [...string].reduce(
-      (hash, char) => ((hash << 5) - hash + char.charCodeAt(0)) | 0,
-      0
-    )
-  ).slice(0, 5);
+const hashCode = string =>
+  [...string].reduce(
+    (hash, char) => ((hash << 5) - hash + char.charCodeAt(0)) | 0,
+    0
+  );
 
 let instance;
 export const css = function(strings, ...keys) {
@@ -56,7 +54,7 @@ export const css = function(strings, ...keys) {
     .map((string, index) => (index ? keys[index - 1] : '') + string)
     .join('');
   const result = instance.process(style, {
-    from: hash(style),
+    from: base64(hashCode(style)).slice(0, 5),
     ...options.process,
   });
   boundStyles.call(this).push(result.toString());
