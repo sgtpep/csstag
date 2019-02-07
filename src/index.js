@@ -23,8 +23,7 @@ const boundStyles = function() {
 let instance;
 export const css = function(strings, ...keys) {
   let options = {};
-  Array.isArray(strings) ||
-    ([options, strings, keys] = [strings, keys[0], keys.slice(1)]);
+  Array.isArray(strings) || ([options, strings, ...keys] = [strings, ...keys]);
   keys.length &&
     !options.ignoreInterpolation &&
     // eslint-disable-next-line no-console
