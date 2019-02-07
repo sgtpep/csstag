@@ -1,3 +1,11 @@
+support interpolation
+  remove checks
+  demo
+
+autoprefixer
+  readme
+  tests
+compress css
 github: description, demo
 package.json: keywords
 readme

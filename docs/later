@@ -2,7 +2,7 @@ css-modules vars
   to error message
   readme
 tests
-  remove App.js, Child.js, main.js index.html
+  all plugins
   babel-plugin-csstag
   CSSSyntaxException
 promote
