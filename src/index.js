@@ -20,12 +20,6 @@ const boundStyles = function() {
   return Array.isArray(this) ? this : styles;
 };
 
-const hashCode = string =>
-  [...string].reduce(
-    (hash, char) => ((hash << 5) - hash + char.charCodeAt(0)) | 0,
-    0
-  );
-
 let instance;
 export const css = function(strings, ...keys) {
   let options = {};
@@ -60,6 +54,12 @@ export const css = function(strings, ...keys) {
   boundStyles.call(this).push(result.toString());
   return result.root.tokens;
 };
+
+const hashCode = string =>
+  [...string].reduce(
+    (hash, char) => ((hash << 5) - hash + char.charCodeAt(0)) | 0,
+    0
+  );
 
 export const resetStyles = function() {
   const boundStyles = boundStyles.call(this);
