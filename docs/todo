@@ -1,5 +1,3 @@
-eslint: Buffer env node
-extract functions
 github: description, demo
 package.json: keywords
 readme
