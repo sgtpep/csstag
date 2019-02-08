@@ -72,3 +72,50 @@ Or use [unpkg](https://unpkg.com/) CDN:
 ```javascript
 import css from 'https://unpkg.com/csstag';
 ```
+
+## Usage
+
+Once imported you can declare a CSS module as a tagged template using the tag function `css`:
+
+```javascript
+import css, { appendStyles } from 'csstag';
+
+const styles = css`
+  .foo {
+    color: red;
+  }
+  .bar {
+    color: blue;
+  }
+`;
+```
+
+It returns an object with all exported class names in it:
+
+```javascript
+console.log(styles);
+// outputs: { foo: 'csstag__foo___LTk0O', bar: 'csstag__bar___LTk0O' }
+```
+
+The module `csstag` contains the array of compiled styles called `styles` which gets populated with a new item every time `css` tag function is being called and now contains:
+
+```javascript
+[
+  `.csstag__foo___LTk0O {
+    color: red;
+  }
+  .csstag__bar___LTk0O {
+    color: blue;
+  }`,
+];
+```
+
+You might append all newly added items from that array as a style sheet in your document's `<head>` using the function `appendStyles` imported earlier (in React-like projects it makes sense to call it together with `render()` in your entry point):
+
+```javascript
+appendStyles();
+```
+
+If you're using [Prettier](https://prettier.io/) it will format the CSS code inside `css` tag function.
+
+`csstag` itself comes as a bundle containing some heavy-weight packages like [PostCSS](https://postcss.org/) and has a size of ~100K minimized. To exclude it from your production code and leave only transpiled styles you might use a [Babel](https://babeljs.io/) plugin [babel-plugin-csstag](https://github.com/sgtpep/csstag/tree/master/babel-plugin-csstag).
