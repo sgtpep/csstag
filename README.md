@@ -23,7 +23,7 @@ Demo: https://sgtpep.github.io/csstag/demo/.
 - It's framework ignostic and may be used together with [React](https://reactjs.org/), [Preact](https://preactjs.com/), any other library or framework or no framework at all.
 - Has zero dependencies (it made possible by bundling them in one file).
 - Provided also as a native ES module which can be imported directly in browser without bundlers: `import css from './node_modules/csstag/index.min.js';` or `import css from 'https://unpkg.com/csstag';`
-- Can by transpiled away on building for production and replaced with static CSS using a [Babel](https://babeljs.io/) plugin [babel-plugin-csstag](https://github.com/sgtpep/csstag/tree/master/babel-plugin-csstag).
+- Can by transpiled away for production and replaced with static CSS using a [Babel](https://babeljs.io/) plugin [babel-plugin-csstag](https://github.com/sgtpep/csstag/tree/master/babel-plugin-csstag).
 
 ## Installation
 
