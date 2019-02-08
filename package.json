@@ -25,6 +25,7 @@
     "css",
     "css-modules",
     "esm",
+    "postcss",
     "tagged-template",
     "tagged-template-literal",
     "template-literal"
