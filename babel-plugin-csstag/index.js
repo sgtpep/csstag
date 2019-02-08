@@ -1,4 +1,5 @@
 'use strict';
+const CleanCSS = require('clean-css');
 const { css, styles } = require('csstag');
 
 const addPlaceholders = strings =>
@@ -45,7 +46,9 @@ module.exports = ({ types }, options = {}) => {
             types.callExpression(types.identifier(tag), [
               templateLiteral(
                 types,
-                styles[styles.length - 1].split(placeholder),
+                new CleanCSS()
+                  .minify(styles[styles.length - 1])
+                  .styles.split(placeholder),
                 path.node.quasi.expressions
               ),
               objectExpression(types, exports),
