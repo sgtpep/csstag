@@ -127,6 +127,21 @@ If you're using [Prettier](https://prettier.io/) it will format the CSS code ins
 - `popStyles()`: Empties and returns a list of style sheets built from recent uses of `css` tag function.
 - `styles`: A list of recently built style sheets for a direct access.
 
+If you don't like storing a list of built style sheets in `csstag` module's `styles` array, or you're dealing, for instance, with multiple applications at once, you may create new functions bound to any other array using `.bind()`:
+
+```javascript
+import csstag, { appendStyles } from 'csstag';
+
+const styles = [];
+const css = csstag.bind(styles);
+css`
+  .root {
+    color: red;
+  }
+`;
+appendStyles.bind(styles)();
+```
+
 ## Options
 
 TODO
