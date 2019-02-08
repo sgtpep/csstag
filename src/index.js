@@ -5,9 +5,12 @@ import modulesValues from 'postcss-modules-values';
 import postcss from 'postcss';
 
 export const appendStyles = function() {
-  const style = document.createElement('style');
-  style.textContent = popStyles.bind(this).join('\n');
-  document.head.appendChild(style);
+  const styles = popStyles.call(this).join('\n');
+  if (styles) {
+    const style = document.createElement('style');
+    style.textContent = styles;
+    document.head.appendChild(style);
+  }
 };
 
 const base64 = string =>
