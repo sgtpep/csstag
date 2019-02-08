@@ -1,6 +1,3 @@
-css-modules vars
-  to error message
-  readme
 tests
   bind()
   all plugins
@@ -11,8 +8,9 @@ tests
   interpolation
     csstag
     babel-plugin-csstag
+  :global()
+  css modules vars
 promote
   htm
   css-modules
   css-in-js lists: github, wikipedia
-function to extract vars: css / css modules
