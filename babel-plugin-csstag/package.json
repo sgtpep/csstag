@@ -7,6 +7,17 @@
   },
   "description": "Compiles CSS Modules in csstag's tagged templates to actual styles.",
   "homepage": "https://github.com/sgtpep/csstag/tree/master/babel-plugin-csstag",
+  "keywords": [
+    "babel",
+    "babel-plugin",
+    "browser",
+    "css",
+    "css-modules",
+    "esm",
+    "tagged-template",
+    "tagged-template-literal",
+    "template-literal"
+  ],
   "license": "MIT",
   "repository": "sgtpep/csstag",
   "version": "0.1.1"

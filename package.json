@@ -20,6 +20,15 @@
     "source-map-explorer": "^1.6.0"
   },
   "homepage": "https://github.com/sgtpep/csstag",
+  "keywords": [
+    "browser",
+    "css",
+    "css-modules",
+    "esm",
+    "tagged-template",
+    "tagged-template-literal",
+    "template-literal"
+  ],
   "license": "MIT",
   "name": "csstag",
   "repository": "sgtpep/csstag",
