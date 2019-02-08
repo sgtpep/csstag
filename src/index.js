@@ -24,12 +24,6 @@ let instance;
 export const css = function(strings, ...keys) {
   let options = {};
   Array.isArray(strings) || ([options, strings, ...keys] = [strings, ...keys]);
-  keys.length &&
-    !options.ignoreInterpolation &&
-    // eslint-disable-next-line no-console
-    console.warn(
-      '`csstag` discourages from using string interpolation in tagged templates, because it makes it impossible to strip off heavyweight `csstag` module on bundling for production using `babel-plugin-csstag`. To suppress this warning pass an option `ignoreInterpolation`.'
-    );
   instance ||
     (instance = postcss([
       ...(options.pluginsBefore || []),

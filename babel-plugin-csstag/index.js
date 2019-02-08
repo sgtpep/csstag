@@ -1,7 +1,13 @@
 'use strict';
 const { css, styles } = require('csstag');
 
-const objectExpression = object =>
+const addPlaceholders = strings =>
+  strings.reduce(
+    (result, string, index) => result + (index ? placeholder : '') + string,
+    ''
+  );
+
+const objectExpression = (types, object) =>
   types.objectExpression(
     Object.entries(object).map(([key, value]) =>
       types.objectProperty(
@@ -13,6 +19,16 @@ const objectExpression = object =>
     )
   );
 
+const placeholder = '--babel-plugin-csstag-placeholder';
+
+const templateLiteral = (types, strings, expressions) =>
+  types.templateLiteral(
+    strings.map((string, index, strings) =>
+      types.templateElement({ cooked: string, raw: string })
+    ),
+    expressions
+  );
+
 module.exports = ({ types }, options = {}) => {
   const tag = options.tag || 'css';
   return {
@@ -20,20 +36,21 @@ module.exports = ({ types }, options = {}) => {
     visitor: {
       TaggedTemplateExpression: path => {
         if (path.node.tag.name === tag) {
-          if (path.node.quasi.quasis.length === 1) {
-            path.replaceWith(
-              types.callExpression(types.identifier(tag), [
-                types.stringLiteral(styles[styles.length - 1]),
-                objectExpression(
-                  css(options, [path.node.quasi.quasis[0].value.raw])
-                ),
-              ])
-            );
-          } else {
-            throw path.buildCodeFrameError(
-              '`babel-plugin-csstag` can only process tagged templates without string interpolation. Consider using CSS custom properties instead (also known as CSS variables).'
-            );
-          }
+          const exports = css(options, [
+            addPlaceholders(
+              path.node.quasi.quasis.map(expression => expression.value.raw)
+            ),
+          ]);
+          path.replaceWith(
+            types.callExpression(types.identifier(tag), [
+              templateLiteral(
+                types,
+                styles[styles.length - 1].split(placeholder),
+                path.node.quasi.expressions
+              ),
+              objectExpression(types, exports),
+            ])
+          );
         }
       },
     },
