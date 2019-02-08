@@ -4,7 +4,7 @@
 
 [Babel](https://babeljs.io/) plugin for transpiling [csstag](https://github.com/sgtpep/csstag)'s `css` tag function calls to static CSS for production.
 
-You can find examples for [rollup](https://rollupjs.org/) and [webpack](https://webpack.js.org/) [here](https://github.com/sgtpep/csstag/tree/master/babel-plugin-csstag/examples).
+You can find examples for [rollup](https://rollupjs.org/) and [webpack](https://webpack.js.org/) here: https://github.com/sgtpep/csstag/tree/master/babel-plugin-csstag/examples.
 
 ## Usage with rollup
 
