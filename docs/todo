@@ -1,4 +1,5 @@
-rollup example
+css(): if typeof strings === 'string' -> error
+reoder rollup plugins
 compress css
 autoprefixer
   readme
