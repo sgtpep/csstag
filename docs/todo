@@ -1,9 +1,6 @@
-usage
-  format with prettier: css``
-  use babel plugin
 api
   bind
-  options
+options
 babel-plugin-csstag
   usage
   links to example projects
