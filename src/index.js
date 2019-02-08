@@ -1,4 +1,4 @@
-import localByDefault from 'postcss-modules-local-by-default';
+import modulesLocalByDefault from 'postcss-modules-local-by-default';
 import modulesParser from 'postcss-modules-parser';
 import modulesScope from 'postcss-modules-scope';
 import modulesValues from 'postcss-modules-values';
@@ -36,7 +36,7 @@ export const css = function(strings, ...keys) {
     (instance = postcss([
       ...(options.pluginsBefore || []),
       modulesValues(options.modulesValues),
-      localByDefault(options.localByDefault),
+      modulesLocalByDefault(options.modulesLocalByDefault),
       modulesScope({
         generateScopedName: (name, path) =>
           `${options.prefix || 'csstag'}__${name}___${path.replace(/^\//, '')}`,
