@@ -8,7 +8,7 @@ import { terser } from 'rollup-plugin-terser';
 
 const banner = `
 var process = typeof process === 'undefined' ? { argv: [], env: {} } : process;
-var global = typeof global === 'undefined' ? window : global;
+var global = typeof window === 'undefined' ? typeof global === 'undefined' ? typeof self === 'undefined' ? {} : self : global : window;
 `;
 
 export default {
