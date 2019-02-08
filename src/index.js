@@ -6,7 +6,7 @@ import postcss from 'postcss';
 
 export const appendStyles = function() {
   const style = document.createElement('style');
-  style.textContent = boundStyles.call(this).join('\n');
+  style.textContent = popStyles.bind(this).join('\n');
   document.head.appendChild(style);
 };
 
@@ -59,7 +59,7 @@ const hashCode = string =>
     0
   );
 
-export const resetStyles = function() {
+export const popStyles = function() {
   const boundStyles = boundStyles.call(this);
   return boundStyles.splice(0, boundStyles.length);
 };

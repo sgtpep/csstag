@@ -1,6 +1,6 @@
 export const appendStyles = function() {
   const style = document.createElement('style');
-  style.textContent = boundStyles.call(this).join('\n');
+  style.textContent = popStyles.call(this).join('\n');
   document.head.appendChild(style);
 };
 
@@ -13,7 +13,7 @@ export const css = function(style, exports) {
   return exports;
 };
 
-export const resetStyles = function() {
+export const popStyles = function() {
   const boundStyles = boundStyles.call(this);
   return boundStyles.splice(0, boundStyles.length);
 };
