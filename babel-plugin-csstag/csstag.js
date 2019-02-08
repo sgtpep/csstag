@@ -8,7 +8,7 @@ const boundStyles = function() {
   return Array.isArray(this) ? this : styles;
 };
 
-export const css = (exports, style) => {
+export const css = function(exports, style) {
   boundStyles.call(this).push(style);
   return exports;
 };
