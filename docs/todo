@@ -1,14 +1,6 @@
-usage
-links to example projects
 options
   tag
   csstag options
-rollup
-  https://github.com/rollup/rollup-plugin-alias
-  before other plugins: rollup-plugin-alias({ './node_modules/csstag/index.min.js': './node_modules/babel-plugin-csstag/csstag.js' })
-webpack
-  https://webpack.js.org/configuration/resolve/
-  resolve: { alias: { 'csstag': 'babel-plugin-csstag/csstag' } }
 
 grammar
 release x2
