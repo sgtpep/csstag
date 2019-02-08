@@ -49,10 +49,12 @@ export default {
         {}
       )
     ),
-    nodeResolve(),
+
     commonJS(),
-    nodeBuiltins(),
     json(),
+    nodeBuiltins(),
+    nodeResolve(),
+
     {
       name: 'patch',
       renderChunk: code => ({
