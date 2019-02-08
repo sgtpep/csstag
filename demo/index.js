@@ -1,11 +1,12 @@
 import css, { appendStyles } from '../index.min.js';
 
+const color = '#2980b9';
 const styles = css`
-  @value blue: #2980b9;
+  @value radius: 0.5em;
 
   .outlined {
-    border-radius: 0.5em;
-    border: 3px solid blue;
+    border-radius: radius;
+    border: 3px solid ${color};
   }
 
   .frame {

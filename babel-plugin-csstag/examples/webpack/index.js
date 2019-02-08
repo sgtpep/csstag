@@ -1,8 +1,10 @@
-import css from 'csstag';
+import css, { styles as allStyles } from 'csstag';
 
+const color = 'red';
 const styles = css`
   .foo {
-    color: red;
+    color: ${color};
   }
 `;
-console.log(styles.foo);
+console.log(styles);
+console.log(allStyles[0]);
