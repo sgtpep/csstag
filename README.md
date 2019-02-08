@@ -142,15 +142,15 @@ css`
 appendStyles.bind(styles)();
 ```
 
-To pass custom options pass them in as a second argument of `.bind()`:
+## Options
+
+To pass options pass an object with them as a second argument of `.bind()`:
 
 ```javascript
 import csstag from 'csstag';
 
 const css = csstag.bind(null, { prefix: 'myapp' });
 ```
-
-## Options
 
 - `modulesLocalByDefault`: Options passed to [postcss-modules-local-by-default](https://www.npmjs.com/package/postcss-modules-local-by-default) (default: `null`).
 - `modulesParser`: Options passed to [postcss-modules-parser](https://www.npmjs.com/package/postcss-modules-parser) (default: `null`).
