@@ -1,5 +1,4 @@
 readme
-  description
   usage by formats
   example
   api
@@ -25,3 +24,4 @@ babel-plugin-csstag/readme
   webpack
     https://webpack.js.org/configuration/resolve/
     resolve: { alias: { 'csstag': 'babel-plugin-csstag/csstag' } }
+grammar
