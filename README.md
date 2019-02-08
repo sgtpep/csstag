@@ -110,7 +110,7 @@ The module `csstag` contains the array of compiled styles called `styles` which 
 ];
 ```
 
-You might append all newly added items from that array as a style sheet in your document's `<head>` using the function `appendStyles` imported earlier (in React-like projects it makes sense to call it together with `render()` in your entry point):
+You might append all newly added items from that array as a style sheet as `<style>` in your document's `<head>` using the function `appendStyles` imported earlier (in React-like projects it makes sense to call it together with `render()` in your entry point):
 
 ```javascript
 appendStyles();
@@ -119,3 +119,14 @@ appendStyles();
 If you're using [Prettier](https://prettier.io/) it will format the CSS code inside `css` tag function.
 
 `csstag` itself comes as a bundle containing some heavy-weight packages like [PostCSS](https://postcss.org/) and has a size of ~100K minimized. To exclude it from your production code and leave only transpiled styles you might use a [Babel](https://babeljs.io/) plugin [babel-plugin-csstag](https://github.com/sgtpep/csstag/tree/master/babel-plugin-csstag).
+
+## API
+
+- `css`: A main tag function itself which can by imported as a default or named import.
+- `appendStyles()`: Appends all style sheets built from recent uses of `css` tag function as `<style> in your document's`<head>`. The consecutive calls to this function will produce no effect until next calls to`css`tag function. Uses`popStyles()` internally.
+- `popStyles()`: Empties and returns a list of style sheets built from recent uses of `css` tag function.
+- `styles`: A list of recently built style sheets for a direct access.
+
+## Options
+
+TODO

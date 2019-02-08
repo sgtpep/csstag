@@ -1,5 +1,4 @@
-api
-  bind
+bind
 options
 babel-plugin-csstag
   usage
