@@ -17,8 +17,8 @@ export const css = function(style, exports) {
 };
 
 export const popStyles = function() {
-  const boundStyles = boundStyles.call(this);
-  return boundStyles.splice(0, boundStyles.length);
+  const styles = boundStyles.call(this);
+  return styles.splice(0, styles.length);
 };
 
 export const styles = [];
