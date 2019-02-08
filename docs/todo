@@ -1,10 +1,6 @@
-benefits
-  css modules is a widely adopted well-understood open specification based on standard css with a number of implementations
-  css-in-js libraries are opinionated and bloated
-  a real css
-babel plugin
-format with prettier: css``
 usage
+  format with prettier: css``
+  use babel plugin
 api
   bind
   options
