@@ -94,7 +94,7 @@ It returns an object with all exported class names in it:
 
 ```javascript
 console.log(styles);
-// outputs: { foo: 'csstag__foo___LTk0O', bar: 'csstag__bar___LTk0O' }
+{ foo: 'csstag__foo___LTk0O', bar: 'csstag__bar___LTk0O' }
 ```
 
 The module `csstag` contains the array of compiled styles called `styles`, which is populated with a new item every time `css` tag function is being called, and now contains:
