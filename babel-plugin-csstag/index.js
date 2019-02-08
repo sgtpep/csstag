@@ -23,10 +23,10 @@ module.exports = ({ types }, options = {}) => {
           if (path.node.quasi.quasis.length === 1) {
             path.replaceWith(
               types.callExpression(types.identifier(tag), [
+                types.stringLiteral(styles[styles.length - 1]),
                 objectExpression(
                   css(options, [path.node.quasi.quasis[0].value.raw])
                 ),
-                types.stringLiteral(styles[styles.length - 1]),
               ])
             );
           } else {
