@@ -77,3 +77,17 @@ import babel from 'rollup-plugin-babel';
   },
 ...
 ```
+
+## Options
+
+To pass options add an object with them to your Babel config:
+
+```javascript
+...
+plugins: ['babel-plugin-csstag', { tag: 'custom' }],
+...
+```
+
+- `tag`: A name of a tag function if you used something other than `css` (default: `css`).
+
+All other provided options will be passed to `csstag` as is. They should be the same as ones you used in runtime if any.
