@@ -1,4 +1,4 @@
-# csstag
+# babel-plugin-csstag
 
 [![Build Status](https://travis-ci.org/sgtpep/csstag.svg?branch=master)](https://travis-ci.org/sgtpep/csstag)
 
