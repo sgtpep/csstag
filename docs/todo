@@ -1,15 +1,13 @@
-usage
-example
-api
-  bind
-  options
-babel plugin
 benefits
   css modules is a widely adopted well-understood open specification based on standard css with a number of implementations
   css-in-js libraries are opinionated and bloated
   a real css
+babel plugin
 format with prettier: css``
-files: index.*
+usage
+api
+  bind
+  options
 babel-plugin-csstag
   usage
   links to example projects
@@ -24,3 +22,4 @@ babel-plugin-csstag
     https://webpack.js.org/configuration/resolve/
     resolve: { alias: { 'csstag': 'babel-plugin-csstag/csstag' } }
 grammar
+release
