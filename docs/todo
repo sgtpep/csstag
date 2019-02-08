@@ -1,5 +1,3 @@
-https://github.com/autoprefixer/autoprefixer.github.io/blob/master/package.json
-babel-plugin-csstag: autoprefixer
 github: description, demo
 package.json: keywords
 readme
