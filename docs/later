@@ -2,6 +2,7 @@ css-modules vars
   to error message
   readme
 tests
+  bind()
   all plugins
   babel-plugin-csstag
     webpack
