@@ -3,6 +3,33 @@ const assert = require('assert');
 const sourceMapExplorer = require('source-map-explorer');
 const { sep } = require('path');
 
+const expectedPackages = [
+  '<unmapped>',
+  'css-selector-tokenizer',
+  'cssesc',
+  'fastparse',
+  'icss-replace-symbols',
+  'lodash._arrayeach',
+  'lodash._baseeach',
+  'lodash._bindcallback',
+  'lodash._getnative',
+  'lodash.foreach',
+  'lodash.isarguments',
+  'lodash.isarray',
+  'lodash.keys',
+  'postcss',
+  'postcss-modules-local-by-default',
+  'postcss-modules-parser',
+  'postcss-modules-scope',
+  'postcss-modules-values',
+  'postcss-value-parser',
+  'regenerate',
+  'regexpu-core',
+  'regjsgen',
+  'regjsparser',
+  'rollup-plugin-node-builtins',
+  'src/index.js',
+];
 const packages = Object.keys(sourceMapExplorer('index.min.js').files)
   .map(path =>
     path.startsWith(`node_modules${sep}`)
@@ -19,34 +46,11 @@ const packages = Object.keys(sourceMapExplorer('index.min.js').files)
   )
   .sort();
 try {
-  assert.deepStrictEqual(packages, [
-    '<unmapped>',
-    'css-selector-tokenizer',
-    'cssesc',
-    'fastparse',
-    'icss-replace-symbols',
-    'lodash._arrayeach',
-    'lodash._baseeach',
-    'lodash._bindcallback',
-    'lodash._getnative',
-    'lodash.foreach',
-    'lodash.isarguments',
-    'lodash.isarray',
-    'lodash.keys',
-    'postcss',
-    'postcss-modules-local-by-default',
-    'postcss-modules-parser',
-    'postcss-modules-scope',
-    'postcss-modules-values',
-    'postcss-value-parser',
-    'regenerate',
-    'regexpu-core',
-    'regjsgen',
-    'regjsparser',
-    'rollup-plugin-node-builtins',
-    'src/index.js',
-  ]);
+  assert.deepStrictEqual(packages, expectedPackages);
 } catch (error) {
-  console.error(packages);
+  console.error(
+    'Extra packages:',
+    packages.filter(package => !expectedPackages.includes(package)).join(', ')
+  );
   throw error;
 }
