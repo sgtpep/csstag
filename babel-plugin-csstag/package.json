@@ -3,7 +3,7 @@
   "name": "babel-plugin-csstag",
   "dependencies": {
     "clean-css": "^4.2.1",
-    "csstag": "*"
+    "csstag": "file:.."
   },
   "description": "Compiles CSS Modules in csstag's tagged templates to actual styles.",
   "homepage": "https://github.com/sgtpep/csstag/tree/master/babel-plugin-csstag",

@@ -1,11 +1,11 @@
 {
   "dependencies": {
-    "csstag": "*"
+    "csstag": "file:../../.."
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.3.1",
-    "babel-plugin-csstag": "*",
+    "babel-plugin-csstag": "file:../..",
     "rollup": "^1.1.2",
     "rollup-plugin-alias": "^1.5.1",
     "rollup-plugin-babel": "^4.3.2",
