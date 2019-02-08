@@ -5,6 +5,9 @@ tests
   all plugins
   babel-plugin-csstag
   CSSSyntaxException
+  interpolation
+    csstag
+    babel-plugin-csstag
 promote
   htm
   css-modules
