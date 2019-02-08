@@ -22,6 +22,11 @@ const boundStyles = function() {
 
 let instance;
 export const css = function(strings, ...keys) {
+  if (typeof strings === 'string') {
+    throw new Error(
+      'When using `babel-plugin-csstag` you also need to alias the module `csstag` to `babel-plugin-csstag/csstag`.'
+    );
+  }
   let options = {};
   Array.isArray(strings) || ([options, strings, ...keys] = [strings, ...keys]);
   instance ||
