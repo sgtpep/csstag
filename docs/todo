@@ -1,17 +1,16 @@
-readme
-  usage by formats
-  example
-  api
-    bind
-    options
-  babel plugin
-  benefits
-    css modules is a widely adopted well-understood open specification based on standard css with a number of implementations
-    css-in-js libraries are opinionated and bloated
-    a real css
-  format with prettier: css``
-  files: index.*
-babel-plugin-csstag/readme
+usage by formats
+example
+api
+  bind
+  options
+babel plugin
+benefits
+  css modules is a widely adopted well-understood open specification based on standard css with a number of implementations
+  css-in-js libraries are opinionated and bloated
+  a real css
+format with prettier: css``
+files: index.*
+babel-plugin-csstag
   usage
   links to example projects
   options
