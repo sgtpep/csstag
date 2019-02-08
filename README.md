@@ -110,7 +110,7 @@ The module `csstag` contains the array of compiled styles called `styles` which 
 ];
 ```
 
-You might append all newly added items from that array as a style sheet as `<style>` in your document's `<head>` using the function `appendStyles` imported earlier (in React-like projects it makes sense to call it together with `render()` in your entry point):
+You may want to append all newly added items from that array as a style sheet as `<style>` in your document's `<head>` using the function `appendStyles` imported earlier (in React-like projects it makes sense to call it together with `render()` in your entry point):
 
 ```javascript
 appendStyles();
