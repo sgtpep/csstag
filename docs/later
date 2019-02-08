@@ -4,6 +4,8 @@ css-modules vars
 tests
   all plugins
   babel-plugin-csstag
+    webpack
+    rollup
   CSSSyntaxException
   interpolation
     csstag

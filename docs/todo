@@ -1,7 +1,8 @@
-github: description, demo
+github: description
+travis
+
 package.json: keywords
 readme
-  badge
   description
   usage by formats
   example
@@ -15,7 +16,6 @@ readme
     a real css
   format with prettier: css``
   files: index.*
-  demo
 babel-plugin-csstag/readme
   usage
   links to example projects
