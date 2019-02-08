@@ -142,6 +142,14 @@ css`
 appendStyles.bind(styles)();
 ```
 
+To pass custom options pass them in as a second argument of `.bind()`:
+
+```javascript
+import csstag from 'csstag';
+
+const css = csstag.bind(null, { prefix: 'myapp' });
+```
+
 ## Options
 
 TODO
