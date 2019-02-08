@@ -152,4 +152,11 @@ const css = csstag.bind(null, { prefix: 'myapp' });
 
 ## Options
 
-TODO
+- `modulesLocalByDefault`: Options passed to [postcss-modules-local-by-default](https://www.npmjs.com/package/postcss-modules-local-by-default) (default: `null`).
+- `modulesParser`: Options passed to [postcss-modules-parser](https://www.npmjs.com/package/postcss-modules-parser) (default: `null`).
+- `modulesScope`: Options passed to [postcss-modules-scope](https://www.npmjs.com/package/postcss-modules-scope) (default: `{ generateScopedName: ... }`, a function generating compiled class names).
+- `modulesValues`: Options passed to [postcss-modules-values](https://www.npmjs.com/package/postcss-modules-values) (default: `null`).
+- `pluginsBefore`: An array of `PostCSS` plugin before the default plugin list (default: `[]`).
+- `plugins`: An array of `PostCSS` plugins added to the end of the default plugin list (default: `[]`).
+- `prefix`: A first component of a generated class name (default: `csstag`).
+- `process`: Options passed to the [`process()`](https://api.postcss.org/Processor.html#process) method of `PostCSS` (default: `null`).
