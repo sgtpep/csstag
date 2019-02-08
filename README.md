@@ -6,8 +6,12 @@
 
 ```javascript
 import css from 'csstag';
-const styles = css`.root { color: red; }`;
-<div class={styles.root}></div>
+const styles = css`
+  .root {
+    color: red;
+  }
+`;
+<div class={styles.root} />;
 ```
 
 Demo: https://sgtpep.github.io/csstag/demo/.
