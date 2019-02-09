@@ -35,8 +35,8 @@
   "repository": "sgtpep/csstag",
   "scripts": {
     "build": "rollup -c",
-    "check-format": "npm run format -- -c --no-write",
     "format": "prettier --write '**/*.{css,html,js,json,md,yml}'",
+    "format:check": "npm run format -- -c --no-write",
     "lint": "eslint '**/*.js'",
     "prepublishOnly": "rollup -c",
     "test": "./test"
