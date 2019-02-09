@@ -24,7 +24,7 @@ const placeholder = '--babel-plugin-csstag-placeholder';
 
 const templateLiteral = (types, strings, expressions) =>
   types.templateLiteral(
-    strings.map((string, index, strings) =>
+    strings.map(string =>
       types.templateElement({ cooked: string, raw: string })
     ),
     expressions

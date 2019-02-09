@@ -8,7 +8,10 @@
     "env": {
       "node": true
     },
-    "files": ["babel-plugin-csstag/index.js"]
+    "files": [
+      "babel-plugin-csstag/examples/webpack/webpack.config.js",
+      "babel-plugin-csstag/index.js"
+    ]
   },
   "parserOptions": {
     "ecmaVersion": 2019,

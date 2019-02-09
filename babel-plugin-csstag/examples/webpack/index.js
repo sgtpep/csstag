@@ -6,5 +6,7 @@ const styles = css`
     color: ${color};
   }
 `;
+// eslint-disable-next-line no-console
 console.log(styles);
+// eslint-disable-next-line no-console
 console.log(allStyles[0]);
