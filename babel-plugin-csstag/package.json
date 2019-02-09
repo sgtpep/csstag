@@ -5,7 +5,7 @@
     "clean-css": "^4.2.1",
     "csstag": "file:.."
   },
-  "description": "Compiles CSS Modules in csstag's tagged templates to actual styles.",
+  "description": "Babel plugin for compiling CSS Modules in csstag's tagged templates to actual styles for production.",
   "homepage": "https://github.com/sgtpep/csstag/tree/master/babel-plugin-csstag",
   "keywords": [
     "babel",

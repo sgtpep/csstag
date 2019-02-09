@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/sgtpep/csstag.svg?branch=master)](https://travis-ci.org/sgtpep/csstag)
 
-[Babel](https://babeljs.io/) plugin for transpiling [csstag](https://github.com/sgtpep/csstag)'s `css` tag function calls to static CSS for production.
+[Babel](https://babeljs.io/) plugin for compiling CSS Modules in [csstag](https://github.com/sgtpep/csstag)'s tagged templates to actual styles for production.
 
 You can find examples for [webpack](https://webpack.js.org/) and [rollup](https://rollupjs.org/) here: https://github.com/sgtpep/csstag/tree/master/babel-plugin-csstag/examples.
 

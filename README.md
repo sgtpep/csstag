@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/sgtpep/csstag.svg?branch=master)](https://travis-ci.org/sgtpep/csstag)
 
-[Tagged template](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#Tagged_templates) for [CSS Modules](https://github.com/css-modules/css-modules):
+Use [CSS Modules](https://github.com/css-modules/css-modules) as [tagged templates](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#Tagged_templates) in a browser and [Node.js](https://nodejs.org/). Example:
 
 ```javascript
 import css from 'csstag';
@@ -23,7 +23,7 @@ Demo: https://sgtpep.github.io/csstag/demo/.
 - It's framework agnostic and may be used together with [React](https://reactjs.org/), [Preact](https://preactjs.com/), any other library or framework or no framework at all.
 - Has zero dependencies (it made possible by bundling them in one file).
 - Provided also as a native ES module which can be imported directly in browser without bundlers: `import css from './node_modules/csstag/index.min.js';` or `import css from 'https://unpkg.com/csstag';`
-- Can by transpiled away for production and replaced with static CSS using a [Babel](https://babeljs.io/) plugin [babel-plugin-csstag](https://github.com/sgtpep/csstag/tree/master/babel-plugin-csstag).
+- Can by excluded from production code and replaced with static CSS using a [Babel](https://babeljs.io/) plugin [babel-plugin-csstag](https://github.com/sgtpep/csstag/tree/master/babel-plugin-csstag).
 
 ## Installation
 
@@ -118,7 +118,7 @@ appendStyles();
 
 If you're using [Prettier](https://prettier.io/), it will format the CSS code inside `css` tag function.
 
-`csstag` itself comes as a bundle containing some heavy-weight packages like [PostCSS](https://postcss.org/) and has a size of ~100K minimized. To exclude it from your production code and leave only transpiled styles you might use a [Babel](https://babeljs.io/) plugin [babel-plugin-csstag](https://github.com/sgtpep/csstag/tree/master/babel-plugin-csstag).
+`csstag` itself comes as a bundle containing some heavy-weight packages like [PostCSS](https://postcss.org/) and has a size of ~100K minimized. To exclude it from production code and leave only compiled styles you might use a [Babel](https://babeljs.io/) plugin [babel-plugin-csstag](https://github.com/sgtpep/csstag/tree/master/babel-plugin-csstag).
 
 ## API
 
