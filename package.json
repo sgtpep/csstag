@@ -35,11 +35,11 @@
   "repository": "sgtpep/csstag",
   "scripts": {
     "build": "rollup -c",
-    "format": "prettier --write '**/*.{css,html,js,json,md,yml}'",
-    "format:check": "npm run format -- -c --no-write",
-    "lint": "eslint '**/*.js'",
+    "eslint": "eslint '**/*.js'",
     "prepublishOnly": "rollup -c",
-    "test": "./test"
+    "prettier": "prettier --write '**/*.{css,html,js,json,md,yml}'",
+    "prettier:check": "npm run prettier -- -c --no-write",
+    "test": "npm run prettier:check && npm run eslint && npm run build && ./test"
   },
   "version": "0.3.0"
 }
