@@ -43,7 +43,7 @@ yarn add csstag
 
 ### From Node.js
 
-```shelljavascript
+```javascript
 const { css } = require('csstag');
 ```
 
