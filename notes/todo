@@ -1,2 +1,6 @@
+update deps
+  notifications
+warn about using non-existing class
 auto camel-case
   option to disable
+promote
