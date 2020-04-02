@@ -31,6 +31,7 @@
     "template-literal"
   ],
   "license": "MIT",
+  "module": "index.mjs",
   "name": "csstag",
   "repository": "sgtpep/csstag",
   "scripts": {
