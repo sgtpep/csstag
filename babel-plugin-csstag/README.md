@@ -52,13 +52,13 @@ In `rollup.config.js` override imports of `csstag` with a replacement stub scrip
 ```javascript
 import alias from 'rollup-plugin-alias';
 ...
-  plugins: {
+  plugins: [
     ...
     alias({
       csstag: 'node_modules/babel-plugin-csstag/csstag.js',
     }),
     ...
-  },
+  ],
 ...
 ```
 
@@ -84,7 +84,11 @@ To pass options add an object with them to your Babel config:
 
 ```javascript
 ...
-plugins: ['babel-plugin-csstag', { tag: 'custom' }],
+plugins: [
+  ...
+  ['babel-plugin-csstag', { tag: 'custom' }],
+  ...
+],
 ...
 ```
 
