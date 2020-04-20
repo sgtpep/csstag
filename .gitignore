@@ -1,6 +1,3 @@
 /babel-plugin-csstag/examples/*/bundle.js
-/index.js
-/index.min.js
-/index.min.js.map
-/index.mjs
+/index.*
 node_modules

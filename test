@@ -30,7 +30,7 @@ const expectedPackages = [
   'rollup-plugin-node-builtins',
   'src/index.js',
 ];
-const packages = Object.keys(sourceMapExplorer('index.min.js').files)
+const packages = Object.keys(sourceMapExplorer('index.esm.min.js').files)
   .map(path =>
     path.startsWith(`node_modules${sep}`)
       ? path

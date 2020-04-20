@@ -1,4 +1,4 @@
-import css, { appendStyles } from 'https://unpkg.com/csstag';
+import css, { appendStyles } from 'https://unpkg.com/csstag?module';
 
 const color = '#2980b9';
 const styles = css`

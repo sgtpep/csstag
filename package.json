@@ -20,6 +20,7 @@
     "source-map-explorer": "^1.6.0"
   },
   "homepage": "https://github.com/sgtpep/csstag",
+  "jsnext:main": "index.esm.min.js",
   "keywords": [
     "browser",
     "css",
@@ -31,7 +32,8 @@
     "template-literal"
   ],
   "license": "MIT",
-  "module": "index.mjs",
+  "main": "index.cjs.min.js",
+  "module": "index.esm.min.js",
   "name": "csstag",
   "repository": "sgtpep/csstag",
   "scripts": {

@@ -20,17 +20,13 @@ export default {
   output: [
     {
       exports: 'named',
-      file: 'index.js',
+      file: 'index.cjs.min.js',
       format: 'cjs',
+      sourcemap: true,
     },
     {
       banner,
-      file: 'index.mjs',
-      format: 'esm',
-    },
-    {
-      banner,
-      file: 'index.min.js',
+      file: 'index.esm.min.js',
       format: 'esm',
       sourcemap: true,
     },
@@ -76,12 +72,7 @@ export default {
         map: null,
       }),
     },
-    {
-      name: 'terser',
-      renderChunk: (code, chunk, options) =>
-        options.format === 'es' && options.sourcemap
-          ? terser().renderChunk(code, chunk, options)
-          : { code, map: null },
-    },
+
+    terser(),
   ],
 };
