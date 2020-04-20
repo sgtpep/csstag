@@ -33,7 +33,7 @@ const templateLiteral = (types, strings, expressions) =>
 module.exports = ({ types }, options = {}) => {
   const tag = options.tag || 'css';
   return {
-    name: 'htm',
+    name: 'csstag',
     visitor: {
       TaggedTemplateExpression: path => {
         if (path.node.tag.name === tag) {
