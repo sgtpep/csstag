@@ -1,6 +1,6 @@
 {
   "author": "Danil Semelenov",
-  "browser": "index.min.js",
+  "browser": "index.esm.min.js",
   "description": "Use CSS Modules as tagged templates in a browser and Node.js.",
   "devDependencies": {
     "eslint": "^5.13.0",
@@ -44,5 +44,5 @@
     "prettier:check": "npm run prettier -- -c --no-write",
     "test": "npm run prettier:check && npm run eslint && npm run build && ./test"
   },
-  "version": "0.3.1"
+  "version": "0.3.3"
 }
