@@ -3,7 +3,7 @@
   "description": "Use CSS Modules as tagged templates in a browser and Node.js.",
   "devDependencies": {
     "eslint": "^5.13.0",
-    "postcss": "^7.0.14",
+    "postcss": "^8.2.10",
     "postcss-modules-local-by-default": "^2.0.4",
     "postcss-modules-parser": "^1.1.1",
     "postcss-modules-scope": "^2.0.1",
