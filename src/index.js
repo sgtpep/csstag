@@ -49,7 +49,7 @@ export const css = function(strings, ...keys) {
     .map((string, index) => (index ? keys[index - 1] : '') + string)
     .join('');
   const result = instance.process(style, {
-    from: base64(hashCode(style)).slice(0, 5),
+    from: base64(hashCode(style)).slice(0, options.hashLength + 1 || 5),
     ...options.process,
   });
   boundStyles.call(this).push(result.toString());

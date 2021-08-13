@@ -160,3 +160,4 @@ const css = csstag.bind(null, { prefix: 'myapp' });
 - `plugins`: An array of `PostCSS` plugins added to the end of the default plugin list (default: `[]`).
 - `prefix`: A first component of a generated class name (default: `csstag`).
 - `process`: Options passed to the [`process()`](https://api.postcss.org/Processor.html#process) method of `PostCSS` (default: `null`).
+- `hashLength`: Class name hash length to minimize collision risk (default: `5`).
